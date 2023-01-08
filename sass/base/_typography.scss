@@ -1,4 +1,11 @@
 
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey;
+}
+
 .heading-primary{
     color: $color-white;
     text-transform: uppercase;
@@ -29,4 +36,39 @@
      animation-duration: 1000ms;
      animation-timing-function: ease-out;
  }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+
+    /*Text with cool gradient */
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
+    display: inline-block; /*so that the background image does not cover all available width*/
+    background-clip:border-box;
+    -webkit-background-clip: text; /*clips the background every where except the text*/
+    color:transparent; /* makes the text transparent so that background can be visible*/
+
+    transition: all 200ms;
+
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow:  .5rem 1rem 2rem rgba($color-black, 0.2);
+    }
+}
+
+.heading-tertiary{
+font-size: $default-font-size;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
 }

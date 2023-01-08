@@ -5,7 +5,7 @@
                         ,url(../img/hero.jpg); /* behaves as a stack first the img then the linear gradient */
     background-size: cover;  /* specifiy the size of the bg image ("auto", "cover" and "contain") */
     background-position: top; /* keeps our bg image sticked to the top so that while resizing it doesnot move */
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% ); /* allows us to clip the element using the co-ordinates*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% ); /* allows us to clip the element using the co-ordinates*/
 
     position: relative;
 
