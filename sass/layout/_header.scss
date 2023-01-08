@@ -1,0 +1,37 @@
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary) /*linear gradient direction , start color - end color */
+                        ,url(../img/hero.jpg); /* behaves as a stack first the img then the linear gradient */
+    background-size: cover;  /* specifiy the size of the bg image ("auto", "cover" and "contain") */
+    background-position: top; /* keeps our bg image sticked to the top so that while resizing it doesnot move */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% ); /* allows us to clip the element using the co-ordinates*/
+
+    position: relative;
+
+
+
+    &__logo-box {
+        position: absolute;
+        top:4rem;
+        left: 4rem;
+    }
+
+    &__logo{
+        height: 3.5rem;
+    opacity: 0.8;
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 40%; /* so this is 40% of the parent */
+        left:50%;
+        transform: translate(-50%, -40%); /*and this transform is from the center of the element itself*/
+        text-align: center;
+    }
+
+
+}
+
+
+
