@@ -1,7 +1,7 @@
 
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary) /*linear gradient direction , start color - end color */
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark) /*linear gradient direction , start color - end color */
                         ,url(../img/hero.jpg); /* behaves as a stack first the img then the linear gradient */
     background-size: cover;  /* specifiy the size of the bg image ("auto", "cover" and "contain") */
     background-position: top; /* keeps our bg image sticked to the top so that while resizing it doesnot move */
