@@ -27,6 +27,15 @@
     color:$color-grey;
 }
 
+&--green {
+    background-color: $color-primary-dark;
+    color: $color-white;
+
+    &::after {
+        background-color: $color-primary-dark;
+    }
+}
+
 &::after{ /* after is special pseudo element which allows to style the element after the current class element*/
     content: "";
     display: inline-block;

@@ -1,0 +1,103 @@
+.form{
+    &__group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    &__input{
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem; // always a bit extra on the sides
+        border-radius: 2px;
+        color:inherit;
+        background-color: rgba($color-white, 50%);
+        border:none;
+        font-family: inherit; //input element dont inherit automaitcally
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+        &::-webkit-input-placeholder{   //allows to color the placeholder text
+             color:$color-grey-dark-2;
+        }
+
+        &:focus{ //when the input field is focused
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+            border-bottom: 3px solid $color-primary-dark;
+        }
+
+        &:focus:invalid{ //if the entered value is not valid according to html-validation;
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    }
+
+
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all 800ms;
+    }
+
+     //placeholder shown 
+    &__input:placeholder-shown + &__label{  //adjacent sibling selector need to be careful in order of siblings
+            opacity: 0;
+            visibility: hidden; // we are using both opacity and visibilty because we cannot animate visibility
+            transform: translateY(-4rem);
+        }
+
+        &__radio-group {
+            width: 49%;
+            display: inline-block;
+        }
+    
+        &__radio-input {
+            display: none;
+        }
+        
+        &__radio-label {
+            font-size: $default-font-size;
+            cursor: pointer;
+            position: relative;
+            padding-left: 4.5rem;
+        }
+    
+        &__radio-button {
+            height: 3rem;
+            width: 3rem;
+            border: 5px solid $color-primary-dark;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: -.4rem;
+    
+            &::after {
+                content: "";
+                display: block;
+                height: 1.3rem;
+                width: 1.3rem;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $color-primary-dark;
+                opacity: 0;
+                transition: opacity .2s;
+            }
+        }
+    
+        &__radio-input:checked ~ &__radio-label &__radio-button::after {
+            opacity: 1;
+        }
+
+    &__btn{
+        padding: 1.5rem 2rem;
+        margin-left: 3rem;
+        border-radius: 3rem;
+        border: none;
+    }
+}
