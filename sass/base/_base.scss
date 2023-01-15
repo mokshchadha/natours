@@ -6,15 +6,31 @@
  box-sizing: border-box; 
 }
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
 
 html {
     font-size: 62.5%;
+    @include respond(phone){
+        font-size: 50%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(big-desktop){
+        font-size: 80%;
+    }
 }
 body { /* basics to inherit in every child */
     padding: 3rem;
+    box-sizing: border-box;
 }
 
-.vsc-initialized{
-    background-color: transparent;
-    padding: 0 ;
-}
+ 

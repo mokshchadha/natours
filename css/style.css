@@ -1,3 +1,10 @@
+/*
+0-600px - phone 
+600-900px - tablet portrait mode
+900-1200px- tablet landscape
+
+1800px + - big desktop
+*/
 *,
 * ::after,
 * ::before {
@@ -8,14 +15,23 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 body {
   /* basics to inherit in every child */
-  padding: 3rem; }
-
-.vsc-initialized {
-  background-color: transparent;
-  padding: 0; }
+  padding: 3rem;
+  box-sizing: border-box; }
 
 @keyframes moveInLeft {
   0% {
@@ -69,6 +85,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1000ms;
     animation-timing-function: ease-out; }
+    @media (max-width: 600px) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     font-size: 1.5rem;
     display: block;
